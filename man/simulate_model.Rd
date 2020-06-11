@@ -4,11 +4,24 @@
 \alias{simulate_model}
 \title{A Function to Simulate a Model from a Generic Simulation Function, with Pre and Post Processing}
 \usage{
-simulate_model(model, sim_fn, inits = NULL, params = NULL,
-  times = NULL, as_tibble = TRUE, by_row = FALSE,
-  aggregate_to = NULL, compartments = NULL, strat = NULL,
-  hold_out_var = NULL, new_var = "incidence", total_pop = TRUE,
-  summary_var = FALSE, verbose = FALSE, ...)
+simulate_model(
+  model,
+  sim_fn,
+  inits = NULL,
+  params = NULL,
+  times = NULL,
+  as_tibble = TRUE,
+  by_row = FALSE,
+  aggregate_to = NULL,
+  compartments = NULL,
+  strat = NULL,
+  hold_out_var = NULL,
+  new_var = "incidence",
+  total_pop = TRUE,
+  summary_var = FALSE,
+  verbose = FALSE,
+  ...
+)
 }
 \arguments{
 \item{model}{A model compatible with your \code{sim_fn}.}
@@ -25,7 +38,7 @@ a \code{params} argument, and a \code{as.data.frame} argument.}
 \item{as_tibble}{Logical (defaults to \code{TRUE}) indicating if the output
 should be returned as a tibble, otherwise returned as the default \code{sim_fn} output.}
 
-\item{by_row}{Logical (defaults to \code{FALSE}) indicating if inputed parameters should be inputed as a block to \code{sim_fn}
+\item{by_row}{Logical (defaults to \code{FALSE}) indicating if inputted parameters should be inputted as a block to \code{sim_fn}
 or individually. If \code{TRUE} then function will always return a tibble. Does not currently work with sim_fn that produces
 multiple simulations for a single parameter set - for this scenario a block based approach or post processing is required.}
 

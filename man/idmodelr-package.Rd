@@ -6,7 +6,7 @@
 \alias{idmodelr-package}
 \title{idmodelr: Infectious Disease Model Library and Utilities}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Explore a range of infectious disease models in a consistent framework. 
     The primary aim of 'idmodelr' is to provide a library of infectious disease models
@@ -16,7 +16,7 @@ Explore a range of infectious disease models in a consistent framework.
     functionality; a simulation wrapper; scenario analysis tooling; an interactive 
     dashboard; tools for handling mult-dimensional models; and both model and parameter
     look up tables. Unlike other modelling packages such as 'pomp' (<https://kingaa.github.io/pomp/>), 'libbi' (<http://libbi.org>)
-    and 'EpiModel' (<http://www.epimodel.or>), 'idmodelr' serves primarily as an educational 
+    and 'EpiModel' (<http://www.epimodel.org>), 'idmodelr' serves primarily as an educational 
     resource. It is most comparable to epirecipes (<http://epirecip.es/epicookbook/chapters/simple>)
     but provides a more consistent framework, an R based workflow, and additional utility tooling. 
     After users have explored model dynamics with 'idmodelr' they may then 
@@ -36,7 +36,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Sam Abbott \email{contact@samabbott.co.uk} (0000-0001-8057-8037)
+\strong{Maintainer}: Sam Abbott \email{contact@samabbott.co.uk} (\href{https://orcid.org/0000-0001-8057-8037}{ORCID})
+
+Authors:
+\itemize{
+  \item Akira Endo \email{akira.endo@lshtm.ac.uk} (\href{https://orcid.org/0000-0001-6377-7296}{ORCID})
+}
 
 }
 \keyword{internal}

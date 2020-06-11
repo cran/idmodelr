@@ -4,10 +4,19 @@
 \alias{aggregate_model}
 \title{A Function to Apply Multiple Aggregations to Model Output}
 \usage{
-aggregate_model(df, aggregate_to = NULL, compartments = NULL,
-  strat = NULL, hold_out_var = NULL, id_col = NULL, groups = NULL,
-  new_var = "incidence", total_pop = TRUE, summary_var = FALSE,
-  test = FALSE)
+aggregate_model(
+  df,
+  aggregate_to = NULL,
+  compartments = NULL,
+  strat = NULL,
+  hold_out_var = NULL,
+  id_col = NULL,
+  groups = NULL,
+  new_var = "incidence",
+  total_pop = TRUE,
+  summary_var = FALSE,
+  test = FALSE
+)
 }
 \arguments{
 \item{df}{A dataframe of Model Output.}
@@ -48,13 +57,10 @@ An aggregated dataframe.
 A Function to Apply Multiple Aggregations to Model Output
 }
 \examples{
-
 df <- data.frame(A1 = 1, B1 = 1, A2 = 1, B2 = 1, A3 = 1, B3 = 1)
 aggregate_model(df, aggregate_to = "incidence",
                 compartments = c("A", "B"), strat = 3,
                 summary_var = TRUE)
-
-
 }
 \seealso{
 aggregate_model aggregate_model_internal combine_to_age_model combine_strat_model_output summarise_var_by_strat
