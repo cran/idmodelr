@@ -14,6 +14,30 @@
 
 <title>Other resources</title>
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
 
 
 
@@ -222,7 +246,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div id="modelling-packages" class="section level2">
 <h2>Modelling packages</h2>
 <div id="pomp" class="section level3">
-<h3><a href="https://kingaa.github.io/pomp">Pomp</a></h3>
+<h3><a href="https://kingaa.github.io/pomp/">Pomp</a></h3>
 <p><code>pomp</code> provides a very general realization of nonlinear partially-observed Markov processes (AKA nonlinear stochastic dynamical systems). These are a generalization of linear state-space and hidden Markov models to nonlinear, non-Gaussian processes in either discrete or continuous time. In pomp, one can implement a model by specifying its unobserved process and measurement components; the package uses these functions in algorithms to simulate, analyse, and fit the model to data.</p>
 <div id="pros" class="section level4">
 <h4>Pros</h4>
@@ -323,7 +347,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>Another standard reference text. This book provides a comprehensive introduction to the modeling of infectious diseases in humans and animals, focusing on recent developments as well as more traditional approaches. Code is provided for each model introduced and analyses are explained in detail. This book is aimed at readers with some background mathematical and computational knowledge.</p>
 </div>
 <div id="epidemics-models-and-data-using-r" class="section level3">
-<h3><a href="https://www.springer.com/gp/book/9783319974866">Epidemics: Models and Data using R</a></h3>
+<h3><a href="https://link.springer.com/book/10.1007/978-3-319-97487-3">Epidemics: Models and Data using R</a></h3>
 <p>This book is designed to be a practical study in infectious disease dynamics. The book offers an easy to follow implementation and analysis of mathematical epidemiology. It focuses on recent case studies in order to explore various conceptual, mathematical, and statistical issues. Whilst light on theory (you may need to supplement this with other resources) this book provides full R code and is accompanied by an <a href="https://github.com/objornstad/epimdr">R package</a>.</p>
 </div>
 </div>
